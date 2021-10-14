@@ -1,8 +1,8 @@
 package com.fundamentosplatzi.springboot.fundamentos.pojo;
-
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.context.properties.ConstructorBinding;
 
+@ConstructorBinding // Anotacion para que la clase se pueda inyectar como dependencia
 @ConfigurationProperties(prefix = "user")
 public class UserPojo {
     private String email;
